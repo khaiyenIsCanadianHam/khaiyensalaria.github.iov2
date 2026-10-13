@@ -59,3 +59,7 @@ The PDF links allow visitors to view the original evidence. No separate official
 The supplied `04_Design.zip` contains fourteen design documents covering brand identity, logo, color, typography, iconography, components, motion, animations, glass, scrolling, cursor behavior, 3D, mockups, and UX principles. Their reusable themes are clarity, consistency, purposeful depth, feedback, responsive behavior, accessibility, and efficient motion. The README records how those principles are adapted to the personal portfolio.
 
 Missing values are tracked in the README: Web3Forms key and confirmed delivery, exact local portrait, dates/contributions for three academic documents, corrected digital literacy cover/title, optional demos/screenshots/social preview, optional Search Console verification, and hosting confirmation. Do not turn these maintenance notes into visitor-facing implementation instructions or substitute fictional claims.
+
+## Additional owner-confirmed skills
+
+On October 13, 2026, the owner supplied React, TypeScript, PostgreSQL, SQLite, MySQL, scripting, TensorFlow, scikit-learn, NumPy, and pandas as personal skills. These are listed in About. This does not change the documented status of Khami’s unconnected machine-learning engine.

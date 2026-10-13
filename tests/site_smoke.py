@@ -17,7 +17,7 @@ from playwright.sync_api import expect, sync_playwright
 
 def run():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--url", default="http://127.0.0.1:8000/khaiyensalaria.github.iov2/")
+    parser.add_argument("--url", "--base-url", dest="url", default="http://127.0.0.1:8000/khaiyensalaria.github.iov2/")
     parser.add_argument("--chromium", default="/usr/bin/chromium")
     parser.add_argument("--axe", type=Path)
     parser.add_argument("--screenshots", type=Path, default=Path("/tmp"))
