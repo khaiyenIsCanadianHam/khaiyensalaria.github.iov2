@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://khaiyeniscanadianham.github.io/khaiyensalaria.github.iov2/sitemap.xml
