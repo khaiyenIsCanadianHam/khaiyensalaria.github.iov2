@@ -58,7 +58,7 @@ The PDF links allow visitors to view the original evidence. No separate official
 
 The supplied `04_Design.zip` contains fourteen design documents covering brand identity, logo, color, typography, iconography, components, motion, animations, glass, scrolling, cursor behavior, 3D, mockups, and UX principles. Their reusable themes are clarity, consistency, purposeful depth, feedback, responsive behavior, accessibility, and efficient motion. The README records how those principles are adapted to the personal portfolio.
 
-Missing values are tracked in the README: Web3Forms key and confirmed delivery, dates/contributions for three academic documents, corrected digital literacy cover/title, optional demos/screenshots/social preview, optional Search Console verification, and hosting confirmation. Do not turn these maintenance notes into visitor-facing implementation instructions or substitute fictional claims.
+Missing values are tracked in the README: confirmed Web3Forms delivery, dates/contributions for three academic documents, corrected digital literacy cover/title, optional demos/screenshots/social preview, optional Search Console verification, and hosting confirmation. Do not turn these maintenance notes into visitor-facing implementation instructions or substitute fictional claims.
 
 ## Additional owner-confirmed skills
 
@@ -74,3 +74,7 @@ At the owner’s explicit request, four illustrative laptop mockups replaced the
 - `assets/images/hanami-mockup.webp`: client/project dashboard based on the original fictional demonstration screenshot.
 
 The generated PNG originals remain outside the checkout; WebP copies preserve their composition while reducing download size. The portrait was subsequently supplied in `pfp.zip` and installed unchanged. An AI-redrawn portrait was not installed.
+
+## Web3Forms configuration
+
+The owner supplied the public frontend access key, which is now configured in the hidden `access_key` field in `index.html`. It is a public form identifier, not a mailbox password or private credential. Automated tests use test-only keys and intercepted API responses; live delivery remains unverified.

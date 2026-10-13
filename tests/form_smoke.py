@@ -43,7 +43,10 @@ def run(base_url: str, browser_path: str) -> None:
 
         expect(form.locator('[data-step="0"]')).to_be_visible()
         expect(form.locator('[data-step="1"]')).to_be_hidden()
-        expect(form.locator("[data-form-availability]")).to_be_visible()
+        if form.locator('[name="access_key"]').input_value().strip():
+            expect(form.locator("[data-form-availability]")).to_be_hidden()
+        else:
+            expect(form.locator("[data-form-availability]")).to_be_visible()
         next_button.click()
         expect(name).to_be_focused()
         expect(name).to_have_attribute("aria-invalid", "true")
@@ -103,13 +106,15 @@ def run(base_url: str, browser_path: str) -> None:
         consent = form.locator('[name="privacy_acknowledgment"]')
         expect(consent).to_be_focused()
         consent.check()
+        # Exercise missing-key recovery independently of production configuration.
+        form.locator('[name="access_key"]').evaluate("element => { element.value = ''; }")
         submit_button.click()
         expect(feedback).to_contain_text("Online submission is not available yet")
         expect(feedback.locator('a[href="mailto:khaiyenbusiness@gmail.com"]')).to_be_visible()
         expect(message).to_have_value(inquiry)
         print("PASS: validation, keyboard navigation, conditions, review escaping, missing-key fallback")
 
-        # A test-only value is injected into this browser; the source remains empty.
+        # A test-only value is injected into this browser; the owner’s production key is never used for test submissions.
         form.locator('[name="access_key"]').evaluate("element => { element.value = 'test-only-public-key'; }")
         sent_payloads = []
         mock = {"status": 422, "body": json.dumps({"success": False})}

@@ -45,7 +45,7 @@ The UI test accepts `--url`, `--chromium`, and `--screenshots` overrides. Form t
 
 ## Scope and remaining checks
 
-These are Chromium viewport and behavior checks, not testing on physical iOS/Android devices or Safari/Firefox. Automated accessibility results do not replace assistive-technology and user testing. Lighthouse was not run. GitHub Pages deployment and its actual 404 response still need checking after publication. External social pages were not navigated by this test. The original owner-supplied portrait is now a local JPEG and its normal rendering and image-load fallback have been tested. Real inquiry delivery requires the owner's Web3Forms public access key and a successful mailbox receipt test; mocked responses do not establish delivery.
+These are Chromium viewport and behavior checks, not testing on physical iOS/Android devices or Safari/Firefox. Automated accessibility results do not replace assistive-technology and user testing. Lighthouse was not run. GitHub Pages deployment and its actual 404 response still need checking after publication. External social pages were not navigated by this test. The original owner-supplied portrait is now a local JPEG and its normal rendering and image-load fallback have been tested. The owner-supplied Web3Forms public key is now configured; real inquiry delivery still requires a successful mailbox receipt test; mocked responses do not establish delivery.
 
 ## Project mockup update
 
@@ -56,3 +56,7 @@ After replacing all four project previews with generated laptop mockups, the com
 The original `pfp.jpg` from the owner’s `pfp.zip` was copied byte-for-byte to `assets/images/profile.jpg`. A browser check confirmed its 460 × 460 intrinsic dimensions, normal rendering at 375px, and the monogram fallback when its request is blocked. The external avatar dependency and the computer-specific file path were removed.
 
 The complete UI suite also passed again with the local portrait: all 14 viewport/theme combinations, zero automated axe violations, 20 local resources, keyboard navigation, theme behavior, reduced-motion behavior, and the no-JavaScript fallback. Keyboard-order checks now use a fresh document rather than reloading an already focused fragment URL.
+
+## Public form key configured
+
+The owner-supplied public Web3Forms access key is configured. All five form smoke-test groups passed again, including configured-banner behavior, isolated missing-key recovery, mocked provider success/failure, draft preservation, duplicate prevention, timeout recovery, and the native fallback. Tests intercepted provider requests and injected test-only keys; no real email was sent.
