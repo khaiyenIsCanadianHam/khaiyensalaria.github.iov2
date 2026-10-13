@@ -63,3 +63,14 @@ Missing values are tracked in the README: Web3Forms key and confirmed delivery, 
 ## Additional owner-confirmed skills
 
 On October 13, 2026, the owner supplied React, TypeScript, PostgreSQL, SQLite, MySQL, scripting, TensorFlow, scikit-learn, NumPy, and pandas as personal skills. These are listed in About. This does not change the documented status of Khami’s unconnected machine-learning engine.
+
+## Project mockup images
+
+At the owner’s explicit request, four illustrative laptop mockups replaced the abstract project visuals and the direct Hanami screenshot in the portfolio cards. The images were generated from verified project features and interface styling; Hanami additionally used the repository dashboard screenshot as its visual reference. They are clearly labeled illustrative project mockups with sample data, not exact screenshots or evidence of real customers, revenue, or ML performance. Khami’s documented prototype status is preserved.
+
+- `assets/images/amiyen-mockup.webp`: business calculator with loan inputs and sample calculation history.
+- `assets/images/attendance-mockup.webp`: QR scanner and attendance log with sample students.
+- `assets/images/khami-mockup.webp`: sample-data analysis interface prototype.
+- `assets/images/hanami-mockup.webp`: client/project dashboard based on the original fictional demonstration screenshot.
+
+The generated PNG originals remain outside the checkout; WebP copies preserve their composition while reducing download size. The exact portrait remains pending because the inline chat image has no downloadable file locator. An AI-redrawn portrait was not installed.

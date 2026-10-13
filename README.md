@@ -24,9 +24,9 @@ The supplied `04_Design` documents describe Euraolly's design system. This portf
 4. **Purposeful depth:** borders, subtle shadows, and restrained glass surfaces give the interface depth while keeping text readable in both themes.
 5. **Useful feedback:** pointer-responsive liquid-glass highlights, gentle section reveals, hover, focus, validation, and submission states communicate what visitors can do and what happened.
 6. **Inclusive interaction:** native scrolling, keyboard controls, reduced motion, and responsive layouts support different devices and preferences.
-7. **Honest presentation:** verified repository descriptions, original PDFs, and clearly identified demonstration imagery support the portfolio without invented results or testimonials.
+7. **Honest presentation:** verified repository descriptions, original PDFs, and clearly identified illustrative project mockups support the portfolio without invented results or testimonials.
 
-The source documents also discuss cinematic scrolling, magnetic cursors, 3D scenes, and live mockups. These can obstruct keyboard interaction, cause motion discomfort, or add unnecessary rendering cost here. Native scrolling and pointers, lightweight CSS depth, visible focus states, and a real repository screenshot provide accessible alternatives. Liquid-glass reflections track fine pointers, the portrait tilts by at most two degrees, and sections reveal once as they enter view. Reduced motion disables these movements; reduced transparency removes reflections. No content depends on the effects. Content must remain available without animation, backdrop blur, or JavaScript. Reduced-motion preferences take priority over decorative transitions.
+The source documents also discuss cinematic scrolling, magnetic cursors, 3D scenes, and live mockups. These can obstruct keyboard interaction, cause motion discomfort, or add unnecessary rendering cost here. Native scrolling and pointers, lightweight CSS depth, visible focus states, and project-specific device mockups provide accessible alternatives. Liquid-glass reflections track fine pointers, the portrait tilts by at most two degrees, and sections reveal once as they enter view. Reduced motion disables these movements; reduced transparency removes reflections. No content depends on the effects. Content must remain available without animation, backdrop blur, or JavaScript. Reduced-motion preferences take priority over decorative transitions.
 
 ## Files and content
 
@@ -36,7 +36,7 @@ The source documents also discuss cinematic scrolling, magnetic cursors, 3D scen
 - `form.js`: inquiry steps, validation, conditional questions, review, and submission.
 - `404.html`: matching error page with a link back to the project-site homepage.
 - `assets/documents/`: the seven original supplied PDF documents.
-- `assets/images/`: local imagery, including the Hanami dashboard screenshot with fictional demonstration data.
+- `assets/images/`: four optimized WebP project mockups and the original Hanami dashboard reference with fictional demonstration data.
 - `robots.txt`, `sitemap.xml`, and `favicon.svg`: search and browser assets.
 - [`docs/content-sources.md`](docs/content-sources.md): source references, verified facts, and content limitations.
 
@@ -82,7 +82,7 @@ For a user site at `https://khaiyeniscanadianham.github.io/`, use a repository n
 | Update SEO | Edit the title, description, canonical, Open Graph/Twitter fields, and structured data in `index.html`; keep `sitemap.xml`, `robots.txt`, and 404 links consistent with the final URL. |
 | Change appearance | Edit the theme tokens and reusable rules in `style.css`, then check contrast, focus, small screens, and both themes. |
 
-Recommended assets: a square local portrait of roughly 600–1000 pixels per side; consistent landscape project images around 1200 × 750 pixels; and an Open Graph preview of 1200 × 630 pixels. Use WebP or AVIF for photos where practical. Do not substitute fabricated product screenshots or portraits. Keep original PDFs unchanged unless the owner supplies revised versions.
+Recommended assets: a square local portrait of roughly 600–1000 pixels per side; consistent landscape project images around 1200 × 750 pixels; and an Open Graph preview of 1200 × 630 pixels. Use WebP or AVIF for photos where practical. Do not present generated mockups as actual product screenshots or substitute generated portraits for the owner’s exact photo. Keep original PDFs unchanged unless the owner supplies revised versions.
 
 ## Configuration and content still to confirm
 

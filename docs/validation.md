@@ -9,7 +9,7 @@ The static portfolio was tested locally at its GitHub Pages project subpath usin
 | Navigation and focus | **Pass:** mobile menu opens with Enter/Space; Escape closes it and returns focus; following a menu link focuses its destination; resizing to desktop resets menu state. Skip link is visible on keyboard focus. Privacy links open the disclosure. |
 | Themes | **Pass:** system preference updates the theme control; explicit selection overrides the system and persists across reload. |
 | Glass effects | **Pass:** pointer highlights and portrait tilt activate on fine-pointer hover and reset on leave. Reduced motion disables smooth scrolling, tilt, transitions, and reveal animation; reduced transparency removes header blur and reflections. |
-| Local assets | **Pass:** 16 homepage assets/metadata resources return HTTP 200, including CSS, scripts, favicon, project image, social preview, sitemap, robots file, and all seven PDFs. PDF responses have valid PDF signatures. All in-page link targets exist and IDs are unique. |
+| Local assets | **Pass:** 19 homepage assets/metadata resources return HTTP 200, including CSS, scripts, favicon, project image, social preview, sitemap, robots file, and all seven PDFs. PDF responses have valid PDF signatures. All in-page link targets exist and IDs are unique. |
 | JavaScript disabled | **Pass:** at 320px in system dark mode, navigation, portfolio content, all four form sections, and the email fallback remain visible without horizontal overflow. Enhancement buttons remain hidden. |
 | Image failure | **Pass:** blocking the external GitHub avatar reveals the initials fallback without breaking layout. |
 | Missing pages | **Pass locally:** missing nested path returns 404. Simulating GitHub Pages serving the custom `404.html` at that path loads its stylesheet and returns visitors to the project homepage. |
@@ -46,3 +46,7 @@ The UI test accepts `--url`, `--chromium`, and `--screenshots` overrides. Form t
 ## Scope and remaining checks
 
 These are Chromium viewport and behavior checks, not testing on physical iOS/Android devices or Safari/Firefox. Automated accessibility results do not replace assistive-technology and user testing. Lighthouse was not run. GitHub Pages deployment and its actual 404 response still need checking after publication. External social pages were not navigated by this test. The blocked avatar was intentionally tested through its fallback; the exact inline supplied portrait was not available as a local file. Real inquiry delivery requires the owner's Web3Forms public access key and a successful mailbox receipt test; mocked responses do not establish delivery.
+
+## Project mockup update
+
+After replacing all four project previews with generated laptop mockups, the complete UI suite passed again at 320, 375, 600, 768, 1024, 1440, and 1920 CSS pixels in both themes, with zero automated axe violations. All four local WebP images loaded at 1536 × 1024. Their 3:2 framing, descriptive alt text, lazy loading, and mockup/sample-data captions were verified. Each encoded image is approximately 90–104 KB. No inquiry code changed. The exact original portrait is still unavailable as a downloadable attachment; no AI-redrawn portrait was installed.
