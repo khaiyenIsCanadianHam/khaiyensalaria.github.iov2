@@ -28,8 +28,6 @@ def run():
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(executable_path=args.chromium, args=["--no-sandbox"])
         context = browser.new_context(viewport={"width": 1440, "height": 1000}, color_scheme="light")
-        # The remote avatar is unavailable in this environment: exercise its fallback.
-        context.route("https://avatars.githubusercontent.com/**", lambda route: route.abort())
         page = context.new_page()
         page.on("pageerror", lambda error: errors.append(str(error)))
         assert page.goto(args.url, wait_until="networkidle").status == 200
@@ -69,9 +67,10 @@ def run():
         assert page.locator("h1").count() == 1
         assert not page.evaluate("() => [...document.querySelectorAll('a[href^=\"#\"]')].map(e => e.getAttribute('href').slice(1)).filter(id => !document.getElementById(id))")
         assert not page.evaluate("() => [...document.querySelectorAll('[id]')].map(e=>e.id).filter((id,i,ids)=>ids.indexOf(id)!==i)")
-        expect(page.locator("#profile-photo")).to_be_hidden()
+        expect(page.locator("#profile-photo")).to_be_visible()
+        assert page.locator("#profile-photo").evaluate("e => e.complete && e.naturalWidth === 460 && e.naturalHeight === 460")
         expect(page.locator(".portrait-monogram")).to_be_visible()
-        results["checks"].append(f"{len(assets)} local resources return HTTP 200; 7 valid PDF downloads; all anchor targets; avatar fallback")
+        results["checks"].append(f"{len(assets)} local resources return HTTP 200; 7 valid PDF downloads; all anchor targets; local portrait")
 
         page.set_viewport_size({"width": 375, "height": 812})
         menu = page.locator(".menu-toggle")
@@ -98,7 +97,8 @@ def run():
         results["checks"].append("Menu Enter/Space, Escape focus return, destination focus, desktop resize reset, privacy disclosure")
 
         page.evaluate("localStorage.clear()")
-        page.reload(wait_until="networkidle")
+        # Start keyboard-order checks in a fresh document without an anchor target.
+        page.goto(args.url + "?keyboard-check=1", wait_until="networkidle")
         page.keyboard.press("Tab")
         expect(page.locator(".skip-link")).to_be_focused()
         assert page.locator(".skip-link").bounding_box()["y"] >= 0
@@ -134,7 +134,6 @@ def run():
         results["checks"].append("Reduced motion disables smooth scroll, tilt, transitions and reveal; reduced transparency removes glass blur/reflection")
 
         nojs = browser.new_context(java_script_enabled=False, color_scheme="dark", viewport={"width": 320, "height": 812})
-        nojs.route("https://avatars.githubusercontent.com/**", lambda route: route.abort())
         fallback = nojs.new_page()
         fallback.goto(args.url, wait_until="networkidle")
         for selector in ("#main-nav", "#projects", "#research", "#certifications", "#about", "#contact", "noscript .form-availability"):

@@ -36,7 +36,7 @@ The source documents also discuss cinematic scrolling, magnetic cursors, 3D scen
 - `form.js`: inquiry steps, validation, conditional questions, review, and submission.
 - `404.html`: matching error page with a link back to the project-site homepage.
 - `assets/documents/`: the seven original supplied PDF documents.
-- `assets/images/`: four optimized WebP project mockups and the original Hanami dashboard reference with fictional demonstration data.
+- `assets/images/`: the original uploaded portrait (`profile.jpg`), four optimized WebP project mockups, and the original Hanami dashboard reference with fictional demonstration data.
 - `robots.txt`, `sitemap.xml`, and `favicon.svg`: search and browser assets.
 - [`docs/content-sources.md`](docs/content-sources.md): source references, verified facts, and content limitations.
 
@@ -87,7 +87,6 @@ Recommended assets: a square local portrait of roughly 600–1000 pixels per sid
 ## Configuration and content still to confirm
 
 - **Required for inquiry delivery:** real Web3Forms public access key in `index.html`, followed by a confirmed mailbox delivery test.
-- **Portrait:** the inline supplied photo has no locally accessible file in this task. The temporary image uses the owner's GitHub avatar URL with an initials fallback. Upload the exact photo as a local JPG/PNG, optimize it as `assets/images/profile.webp`, and update the image source and dimensions to remove the external dependency.
 - **Research details:** confirm years and individual contributions for the rural education, digital literacy, and data analyst concept documents. The Python permutations/combinations paper explicitly names Khaiyen as a co-author and is dated 2025.
 - **Digital literacy PDF:** its cover repeats the rural education title. Confirm or replace the document before asserting a corrected formal title; its current label follows the supplied filename and body topic.
 - **Optional:** confirmed live project demos, additional authentic project screenshots, employment/client experience, and additional custom preview imagery. These are not invented or required for the existing layout. A 1200 × 630 brand preview is included at `assets/preview.png`.

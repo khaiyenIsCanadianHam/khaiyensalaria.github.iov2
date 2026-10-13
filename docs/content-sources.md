@@ -8,7 +8,7 @@ The supplied `Pasted text.txt` brief identifies **Khaiyen Alexander R. Salaria**
 
 The supplied biography supports experience with Python, Flask, JavaScript, HTML, CSS, SQL, web applications, database-driven systems, and automation tools. No employer, client, testimonial, employment date, commercial result, or performance metric was supplied. Research documents that describe a proposed technology do not by themselves establish professional proficiency or a completed product.
 
-The inline profile photograph was visible in the conversation but did not have a downloadable file locator. The temporary external image is the owner's GitHub avatar, `https://avatars.githubusercontent.com/u/323066210?v=4`, with an initials fallback. Replace it with the supplied local photo when available; do not assert that the remote avatar is the exact supplied photograph.
+The owner supplied `pfp.zip` containing `pfp.jpg`. Its original 460 × 460 JPEG is installed byte-for-byte at `assets/images/profile.jpg`, replacing the external GitHub avatar. The portrait is not AI-redrawn or retouched.
 
 ## Projects
 
@@ -58,7 +58,7 @@ The PDF links allow visitors to view the original evidence. No separate official
 
 The supplied `04_Design.zip` contains fourteen design documents covering brand identity, logo, color, typography, iconography, components, motion, animations, glass, scrolling, cursor behavior, 3D, mockups, and UX principles. Their reusable themes are clarity, consistency, purposeful depth, feedback, responsive behavior, accessibility, and efficient motion. The README records how those principles are adapted to the personal portfolio.
 
-Missing values are tracked in the README: Web3Forms key and confirmed delivery, exact local portrait, dates/contributions for three academic documents, corrected digital literacy cover/title, optional demos/screenshots/social preview, optional Search Console verification, and hosting confirmation. Do not turn these maintenance notes into visitor-facing implementation instructions or substitute fictional claims.
+Missing values are tracked in the README: Web3Forms key and confirmed delivery, dates/contributions for three academic documents, corrected digital literacy cover/title, optional demos/screenshots/social preview, optional Search Console verification, and hosting confirmation. Do not turn these maintenance notes into visitor-facing implementation instructions or substitute fictional claims.
 
 ## Additional owner-confirmed skills
 
@@ -73,4 +73,4 @@ At the owner’s explicit request, four illustrative laptop mockups replaced the
 - `assets/images/khami-mockup.webp`: sample-data analysis interface prototype.
 - `assets/images/hanami-mockup.webp`: client/project dashboard based on the original fictional demonstration screenshot.
 
-The generated PNG originals remain outside the checkout; WebP copies preserve their composition while reducing download size. The exact portrait remains pending because the inline chat image has no downloadable file locator. An AI-redrawn portrait was not installed.
+The generated PNG originals remain outside the checkout; WebP copies preserve their composition while reducing download size. The portrait was subsequently supplied in `pfp.zip` and installed unchanged. An AI-redrawn portrait was not installed.
